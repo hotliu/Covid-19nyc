@@ -3,6 +3,7 @@ Dashboard for visualizing Covid-19 cases in NYC
 
 ### Deploy to Elastic Beanstalk
 ### Set Up CodeCommit
+From: [Youtube Tutorial](https://www.youtube.com/watch?v=ND8hujOoZ14)
 * Grant IAM user CodeCommitAllAccess
 * Go to console.aws.amazon.com and type in CodeCommit
 * Create a new repository
