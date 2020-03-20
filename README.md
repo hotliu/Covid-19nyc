@@ -1,7 +1,9 @@
-### Covid-19nyc
+## Covid-19nyc
 Dashboard for visualizing Covid-19 cases in NYC
 
-### Deploy to Elastic Beanstalk
+### Create Virtualenv
+Follow this [AWS tutorial](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html)
+
 ### Set Up CodeCommit
 From: [Youtube Tutorial](https://www.youtube.com/watch?v=ND8hujOoZ14)
 * Grant IAM user CodeCommitAllAccess
@@ -29,13 +31,18 @@ ssh <copied ssh git-codecommit.us-....>
 * git remote -v should have the copied ssh git-codecommit.us... route
 
 ### Set up Elastic Beanstalk
+Keep on doing everything from IAM user
+Use Windows Power Shell where possible as eb config opens a file
 ```
 $ eb init -p python-3.6 <project name>
 $ eb create <environment name>
-$ eb status
-$ eb deploy
-$ eb open
+$ eb status <environment name>
+$ eb deploy <environment name>
+$ eb open <environment name>
 $ eb logs
 $ eb config
 ```
-
+Checklist:
+* Do you have a default VPC? 
+* Are all your regions consistent?
+* Is your run.py named application.py?
