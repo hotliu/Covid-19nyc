@@ -30,16 +30,36 @@ ssh <copied ssh git-codecommit.us-....>
 * Do regular git add ., git commit -m etc. 
 * git remote -v should have the copied ssh git-codecommit.us... route
 
+### Prepare Flask app for Elastic Beanstalk
+
+* Rename run.py to application.py 
+* Replace code at the very bottom with:
+```
+# Run app server: https://dash.plot.ly/getting-started
+if __name__ == '__main__':
+    application.run(debug=True)
+```
+* In app.py, replace the last line with:
+```
+application = app.server
+```
+After deploying on elastic beanstalk, one might run into this error:
+```
+Script timed out before returning headers: application.py
+```
+[Link to fix the above error](https://stackoverflow.com/questions/41812497/aws-elastic-beanstalk-script-timed-out-before-returning-headers-application-p)
+
 ### Set up Elastic Beanstalk
 Keep on doing everything from IAM user
 Use Windows Power Shell where possible as eb config opens a file
+
 ```
 $ eb init -p python-3.6 <project name>
 $ eb create <environment name>
 $ eb status <environment name>
 $ eb deploy <environment name>
 $ eb open <environment name>
-$ eb logs
+$ eb logs <environment name>
 $ eb config
 ```
 Checklist:
