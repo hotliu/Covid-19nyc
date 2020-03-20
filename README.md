@@ -66,3 +66,16 @@ Checklist:
 * Do you have a default VPC? 
 * Are all your regions consistent?
 * Is your run.py named application.py?
+
+### Redirect Custom Domain NameCheap to Elastic Beanstalk 
+```
+coronaviruscasesnyc.com 
+covid19casesnyc.com
+```
+
+* Click on: Manage > Advanced DNS 
+```
+URL Redirect | Host: @ | Value: Elastic Beanstalk URL | Unmasked
+URL Redirect | Host: www | Value: Elastic Beanstalk URL | Unmasked
+```
+* Wait 30 min
