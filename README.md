@@ -1,5 +1,19 @@
 ## Covid-19nyc
-Dashboard for visualizing Covid-19 cases in NYC
+Dashboard for visualizing Covid-19 cases in NYC.
+The one-stop-shop for everything Covid-19.
+Flask App using Plotly-Bootstrap-Components Library.
+
+### Running the App Locally:
+To activate virtualenv:
+```
+source virt/Scripts/activate
+```
+
+To run Flask app:
+```
+python application.py
+```
+### To Deploy:
 
 ### Create Virtualenv
 Follow this [AWS tutorial](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html)
